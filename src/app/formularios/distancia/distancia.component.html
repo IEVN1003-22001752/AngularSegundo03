@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Distancia</title>
+</head>
+
+<body>
+
+    <h1>Calcular Distancia entre Dos Puntos</h1> 
+
+    <form [formGroup]="formulario">
+        <h2>Punto 1</h2>
+        <h5>
+            <label for="">X1: </label>
+            <input formControlName="X1" type="number">
+        </h5>
+
+        <h5>
+            <label for="">Y1: </label>
+            <input formControlName="Y1" type="number">
+        </h5>
+        
+        <h2>Punto 2</h2>
+        <h5>
+            <label for="">X2: </label>
+            <input formControlName="X2" type="number">
+        </h5>
+
+        <h5>
+            <label for="">Y2: </label>
+            <input formControlName="Y2" type="number">
+        </h5>
+        
+    </form>
+
+    <button (click)="calcularDistancia()" type="submit">Calcular Distancia</button>
+    
+    <h1>La distancia entre dos puntos es: {{resultado}}</h1>
+</body>
+
+</html>
