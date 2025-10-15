@@ -12,8 +12,7 @@ export class DistanciaComponent implements OnInit {
 
   formulario!: FormGroup;
   resultado!: number;
-
-  constructor() { }
+  objMult = new Distancia;
 
   ngOnInit(): void {
     this.formulario = new FormGroup(
@@ -26,8 +25,13 @@ export class DistanciaComponent implements OnInit {
     );
   }
 
-  calcularDistancia(): void {
-    const distanciador = new Distancia(this.formulario);
-    this.resultado = distanciador.calcularDistancia();
+  Proceso(): void {
+    this.objMult.X1 = this.formulario.value.X1
+    this.objMult.X2 = this.formulario.value.X2
+    this.objMult.Y1 = this.formulario.value.Y1
+    this.objMult.Y2 = this.formulario.value.Y2
+
+    this.objMult.calcular()
+    this.resultado = this.objMult.resultado
   }
 }

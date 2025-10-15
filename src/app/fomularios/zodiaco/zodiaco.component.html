@@ -1,0 +1,60 @@
+<form [formGroup]="formulario">
+    <div>
+        <h1>Datos Personales</h1>
+
+        <div>
+            <label for="nombre-input">Nombre</label>
+            <input id="nombre-input" formControlName="Nombre" type="text" placeholder="Nombre">
+        </div>
+        <div>
+            <label for="apaterno-input">Apellido Paterno</label>
+            <input id="apaterno-input" formControlName="Apaterno" type="text" placeholder="Apaterno">
+        </div>
+        <div>
+            <label for="amaterno-input">Apellido Materno</label>
+            <input id="amaterno-input" formControlName="Amaterno" type="text" placeholder="Amaterno">
+        </div>
+
+        <h2>Fecha de nacimiento</h2>
+
+        <div>
+            <div>
+                <label for="dia-input">Día</label>
+                <input id="dia-input" formControlName="Dia" type="number" min="1" max="31">
+            </div>
+
+            <div>
+                <label for="mes-input">Mes</label>
+                <input id="mes-input" formControlName="Mes" type="number" min="1" max="12">
+            </div>
+
+            <div>
+                <label for="anio-input">Año</label>
+                <input id="anio-input" formControlName="Año" type="number" min="1900" max="2100">
+            </div>
+        </div>
+
+        <div>
+            <h3>Sexo</h3>
+
+            <label for="masculino-radio">Masculino</label>
+                        <input formControlName="Sexo" type="radio" name="sexo" id="masculino-radio" value="M">
+
+
+            <label for="femenino-radio">Femenino</label>
+                        <input formControlName="Sexo" type="radio" name="sexo" id="femenino-radio" value="F">
+
+        </div>
+
+        <button (click)="Proceso()" type="submit">Calcular Signo</button>
+    </div>
+</form>
+
+
+<div>
+    <h3>{{resultadoNombre}} {{resultadoEdad}} {{resultadoSigno}}</h3>
+    <div *ngIf="resultadoImagen">
+        <img [src]="resultadoImagen" [alt]="resultadoSigno" style="width: 150px; height: auto;">
+    </div>
+</div>
+

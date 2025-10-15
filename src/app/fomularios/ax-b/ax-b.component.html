@@ -1,0 +1,15 @@
+<div>
+    <form [formGroup]="formulario">
+
+        <label for="">Valor 1</label>
+        <input formControlName="A" type="number" placeholder="A">
+
+        <label for="">Valor 2</label>
+        <input formControlName="B" type="number" placeholder="B">
+
+    </form>
+
+    <button (click)="Proceso()" type="submit">Calcular Distancia</button>
+        <h1>La distancia entre dos puntos es: {{resultado}}</h1>
+
+</div>
