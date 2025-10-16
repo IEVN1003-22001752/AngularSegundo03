@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Distancia } from './clase';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-distancia',
@@ -19,7 +20,7 @@ export class DistanciaComponent implements OnInit {
       {
         X1: new FormControl(''),
         Y1: new FormControl(''),
-        X2: new FormControl(''),
+        X2: new FormControl(''), 
         Y2: new FormControl(''),
       }
     );
