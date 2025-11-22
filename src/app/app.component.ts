@@ -7,12 +7,15 @@ import { initFlowbite } from 'flowbite';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { TemhComponent } from "./tem/temh/temh.component";
 import { TempComponent } from "./tem/temp/temp.component";
+import { ZodiacoComponent } from "./fomularios/zodiaco/zodiaco.component";
+import { Distancia } from './fomularios/distancia/clase';
+
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, RouterOutlet, TemhComponent, TempComponent],
+  imports: [NavbarComponent, RouterOutlet,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
